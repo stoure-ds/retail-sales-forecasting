@@ -117,6 +117,141 @@ jupyter notebook "Walmart Store Sales Forecasting.ipynb"
 - Use **cross-validation** (Prophet CV) for more robust error estimates
 
 ---
+# Walmart Weekly Sales Forecasting 📈
+
+Forecasting large-scale retail demand using time-series modeling (Facebook Prophet) to support inventory planning and holiday staffing decisions.
+
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Forecasting](https://img.shields.io/badge/Time%20Series-Forecasting-orange)
+![Prophet](https://img.shields.io/badge/Model-Prophet-success)
+![Status](https://img.shields.io/badge/Project-Complete-brightgreen)
+
+---
+
+## Business Problem
+
+Retail demand shows strong seasonality and sharp holiday spikes.  
+Accurate forecasting is critical for:
+
+- inventory management
+- staffing decisions
+- revenue planning
+- supply chain optimization
+
+This project builds a forecasting pipeline that models trend, seasonality, and holiday effects in Walmart weekly sales.
+
+---
+
+## Dataset
+
+- 6,400+ weekly store records
+- 45 Walmart stores
+- 2010–2012 retail period
+- Aggregated to total weekly sales
+
+Features include:
+
+- weekly sales (target)
+- holiday indicator
+- CPI
+- unemployment
+- fuel price
+- temperature
+
+---
+
+## Modeling Approach
+
+1. Aggregate weekly sales across stores
+2. Train Prophet model with yearly seasonality
+3. Add holiday regressors
+4. Evaluate forecast accuracy
+5. Inspect trend + seasonal decomposition
+
+The model captures repeating retail cycles and holiday-driven spikes.
+
+---
+
+## Results
+
+| Metric | Value |
+|-------|------|
+| RMSE | ~$1.2M |
+| Error Rate | ~2–3% |
+| Seasonality Capture | Strong |
+| Holiday Sensitivity | High |
+| Forecast Stability | Consistent |
+
+The model successfully reproduces annual retail structure and produces realistic future demand projections.
+
+---
+
+## Forecast Visualization
+
+### Sales Forecast
+![Forecast](forecast_plot.png)
+
+### Model Components
+![Components](forecast_components.png)
+
+---
+
+## Project Structure
+
+```
+walmart-sales-forecast/
+│
+├── Walmart Store Sales Forecasting.ipynb
+├── Walmart.csv
+├── forecast_plot.png
+├── forecast_components.png
+└── README.md
+```
+
+---
+
+## Tools Used
+
+- Python
+- Pandas / NumPy
+- Matplotlib / Seaborn
+- Facebook Prophet
+- Statsmodels
+- Jupyter Notebook
+
+---
+
+## Key Insights
+
+- Retail demand is dominated by yearly seasonal structure
+- Holiday spikes drive extreme revenue volatility
+- Trend remains stable across years
+- Prophet handles non-linear seasonality effectively
+
+---
+
+## Future Improvements
+
+- Store-level hierarchical forecasting
+- External regressors (CPI, unemployment)
+- Prophet cross-validation
+- Ensemble models
+
+---
+
+## Author
+
+**Seydou Toure**  
+Data Scientist | Forecasting & Analytics  
+Python • SQL • Machine Learning • Time Series
+
+---
+
+## LinkedIn Project Summary
+
+Built a time-series forecasting model using Facebook Prophet to predict Walmart weekly retail sales. Captured strong yearly seasonality and holiday demand spikes, achieving ~2–3% forecasting error. Demonstrated how retail demand is driven more by cyclical structure than random noise, enabling realistic demand planning and operational decision support.
+
+---
 
 ## Author
 **Seydou Toure**  
